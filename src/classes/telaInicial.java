@@ -36,8 +36,29 @@ public class telaInicial extends javax.swing.JFrame {
         lblFormaTrianguloSimOuNao = new javax.swing.JLabel();
         lblTipoTriangulo = new javax.swing.JLabel();
         btnVerificar = new javax.swing.JButton();
+        lblLadoA = new javax.swing.JLabel();
+        lblLadoB = new javax.swing.JLabel();
+        lblLadoC = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        sldLadoA.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                sldLadoAStateChanged(evt);
+            }
+        });
+
+        sldLadoB.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                sldLadoBStateChanged(evt);
+            }
+        });
+
+        sldLadoC.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                sldLadoCStateChanged(evt);
+            }
+        });
 
         jLabel1.setText("Lado A");
 
@@ -56,10 +77,10 @@ public class telaInicial extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
+                        .addGap(104, 104, 104)
                         .addComponent(lblFormaTrianguloSimOuNao))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
+                        .addGap(114, 114, 114)
                         .addComponent(lblTipoTriangulo)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -68,9 +89,9 @@ public class telaInicial extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblFormaTrianguloSimOuNao)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(lblTipoTriangulo)
-                .addGap(20, 20, 20))
+                .addGap(24, 24, 24))
         );
 
         btnVerificar.setText("Verificar");
@@ -80,52 +101,79 @@ public class telaInicial extends javax.swing.JFrame {
             }
         });
 
+        lblLadoA.setText("50");
+
+        lblLadoB.setText("50");
+
+        lblLadoC.setText("50");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sldLadoC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sldLadoB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sldLadoA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(137, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(sldLadoB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(lblLadoB))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(sldLadoA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(lblLadoA)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(sldLadoC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblLadoC)))
+                        .addGap(0, 92, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(131, 131, 131)
                 .addComponent(btnVerificar)
-                .addGap(41, 41, 41))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(sldLadoA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1)))
-                .addGap(18, 18, 18)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sldLadoA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblLadoA))))
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sldLadoB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(sldLadoB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2))
+                    .addComponent(lblLadoB))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sldLadoC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jLabel3))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblLadoC)
+                            .addComponent(sldLadoC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addComponent(btnVerificar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGap(46, 46, 46)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -139,8 +187,13 @@ public class telaInicial extends javax.swing.JFrame {
         int ladoB = sldLadoB.getValue();
         int ladoC = sldLadoC.getValue();
         String tipoTriangulo = "";
+        Boolean algumLadoIgualZero = verificaSeAlgumLadoIgualZero(ladoA, ladoB, ladoC);
+        Boolean trianguloInvalido = verificaSeTrianguloInvalido(ladoA, ladoB, ladoC);
         
-        if (ladoA == 0 || ladoB == 0 || ladoC ==0){
+        if (algumLadoIgualZero || trianguloInvalido){
+            
+            System.out.println(algumLadoIgualZero);
+            System.out.println(trianguloInvalido);
         
             tipoTriangulo = "Medidas inválidas";
                         
@@ -165,6 +218,43 @@ public class telaInicial extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnVerificarActionPerformed
 
+    private void sldLadoAStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldLadoAStateChanged
+        int ladoA = sldLadoA.getValue();
+        lblLadoA.setText(Integer.toString(ladoA));
+    }//GEN-LAST:event_sldLadoAStateChanged
+
+    private void sldLadoBStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldLadoBStateChanged
+        int ladoB = sldLadoB.getValue();
+        lblLadoB.setText(Integer.toString(ladoB));
+    }//GEN-LAST:event_sldLadoBStateChanged
+
+    private void sldLadoCStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldLadoCStateChanged
+        int ladoC = sldLadoC.getValue();
+        lblLadoC.setText(Integer.toString(ladoC));
+    }//GEN-LAST:event_sldLadoCStateChanged
+    
+    Boolean verificaSeAlgumLadoIgualZero(int ladoA, int ladoB, int ladoC){
+                        
+        Boolean algumLadoIgualZero = (ladoA == 0 || ladoB == 0 || ladoC ==0) ? true : false;
+        
+        return algumLadoIgualZero;
+        
+    }
+    
+    Boolean verificaSeTrianguloInvalido(int ladoA, int ladoB, int ladoC){
+    
+        Boolean trianguloInvalido = false;
+                
+        if (ladoA > (ladoB + ladoC) || ladoB > (ladoA + ladoC) || ladoC > (ladoA + ladoB)) {
+    
+            trianguloInvalido = true;
+            
+        };
+        
+        return trianguloInvalido;
+    
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -207,6 +297,9 @@ public class telaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblFormaTrianguloSimOuNao;
+    private javax.swing.JLabel lblLadoA;
+    private javax.swing.JLabel lblLadoB;
+    private javax.swing.JLabel lblLadoC;
     private javax.swing.JLabel lblTipoTriangulo;
     private javax.swing.JSlider sldLadoA;
     private javax.swing.JSlider sldLadoB;

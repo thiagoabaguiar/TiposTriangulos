@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="TiposTriangulo.jar" size="4977" download="eager" />
+    <jar href="TiposTriangulo.jar" size="7695" download="eager" />
   </resources>
   <application-desc main-class="classes.telaInicial"  name="TiposTriangulo" >
   </application-desc>
