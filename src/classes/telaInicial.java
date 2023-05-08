@@ -190,10 +190,7 @@ public class telaInicial extends javax.swing.JFrame {
         Boolean algumLadoIgualZero = verificaSeAlgumLadoIgualZero(ladoA, ladoB, ladoC);
         Boolean trianguloInvalido = verificaSeTrianguloInvalido(ladoA, ladoB, ladoC);
         
-        if (algumLadoIgualZero || trianguloInvalido){
-            
-            System.out.println(algumLadoIgualZero);
-            System.out.println(trianguloInvalido);
+        if (algumLadoIgualZero || trianguloInvalido){        
         
             tipoTriangulo = "Medidas inválidas";
                         
